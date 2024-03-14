@@ -2,6 +2,7 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    outline: none;
     list-style: none;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -18,4 +19,57 @@ header :where(input, select){
     border: 2px solid #999;
     border-radius: 5px;
     padding-left: 10px;
+}
+
+main{
+    display: flex;
+    padding: 0 100px 50px 100px;
+}
+
+main ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+main ul li{
+    background-color: green;
+    border-radius: 18px;
+    width: 281px;
+    height: 370px;
+}
+
+main ul li img{
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+main ul li div{
+    padding: 5px 20px;
+    max-width: 280.91px;
+}
+
+main ul li div.tituloItem h3{
+    text-align: left;
+    font-size: 14px;
+}
+
+main ul li div.categoriaItem h4{
+    text-align: left;
+    font-size: 12px;
+}
+
+main ul li div.precoAvaliacao{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+main ul li div.precoAvaliacao div.avaliacao{
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-end;
 }

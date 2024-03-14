@@ -17,7 +17,22 @@ async function getProducts() {
     const response = await request.json();
     if (response.length > 0){
         response.map(produto => {
-            produtos.innerHTML += `<li>${produto.title}</li>`
+            produtos.innerHTML += `<li>
+            <img src="/Image/image${produto.id}.png" alt="">
+            <div class="tituloItem">
+                <h3>${produto.title}</h3>
+            </div>
+            <div class="categoriaItem">
+                <h4>${produto.category}</h4>
+            </div>
+            <div class="precoAvaliacao">
+                <span class="preco">R$ ${produto.price}</span>
+                <div class="avaliacao">
+                <span>&#x2B50 &#x2B50 &#x2B50 &#x2B50 &#x2B50</span>
+                <span> ${produto.rating.rate}/5.0</span>
+                </div>
+            </div>
+        </li>`
         })
         return;
     }
