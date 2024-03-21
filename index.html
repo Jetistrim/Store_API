@@ -8,10 +8,10 @@
 </head>
 <body>
     <header>
-        <input id="busca" type="text" placeholder="Buscar Produtos">
-        <select id="categorias"></select>
+        <input id="busca" type="text" placeholder="Buscar Produtos" onkeyup="searchProductByName()">
+        <select id="categorias" onchange="searchProductByCategory()"></select>
         <select id="ordenacao">
-            <option selected disabled>-- Ordenar Por --</option>
+            <option value="0" hidden>-- Ordenar Por --</option>
             <option value="1">Preço</option>
             <option value="2">Avaliações</option>
         </select>
@@ -20,7 +20,7 @@
         <ul id="produtos"></ul>
     </main>
 
-
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
