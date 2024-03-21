@@ -8,12 +8,12 @@
 </head>
 <body>
     <header>
-        <input id="busca" type="text" placeholder="Buscar Produtos" onkeyup="searchProductByName()">
-        <select id="categorias" onchange="searchProductByCategory()"></select>
-        <select id="ordenacao">
-            <option value="0" hidden>-- Ordenar Por --</option>
-            <option value="1">Preço</option>
-            <option value="2">Avaliações</option>
+        <input id="busca" type="text" placeholder="Buscar Produtos" onKeyUp="searchProductByName()">
+        <select id="categorias" onChange="filteredBy()"></select>
+        <select id="ordenacao" onChange="orderingBy()">
+            <option hidden>-- Ordenar Por --</option>
+            <option value="0">Preço</option>
+            <option value="1">Avaliações</option>
         </select>
     </header>
     <main>
