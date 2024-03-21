@@ -10,34 +10,18 @@ function getCategories() {
 } getCategories();
 
 function searchProductByCategory(){
-                fetch(`https://fakestoreapi.com/products/category/${categorias.value}`)
-                .then(response=>response.json())
-                .then(response=>{
-                    console.log(response);
-                    response.map(e => {
-                        if (e.category.value != categorias.value){
-                            console.log(e.category)
-                            let elemento = document.querySelector('main ul li')
-                            elemento.classList.add('none')
-                        }
-                        return;
-                    })
-                    //     switch (categoria){
-                    //         case 0:
-                    //             document.querySelector('main ul li').classList.remove('none')
-                    //             document.querySelector('main ul li .categoriaItem h3').innerText.includes('eletronics').classList.add('none')
-                    //         case 1:
-                    //             document.querySelector('main ul li').classList.remove('none')
-                    //             document.querySelector('main ul li .categoriaItem h3').innerText.includes('jewelery').classList.add('none')
-                    //         case 2:
-                    //             document.querySelector('main ul li').classList.remove('none')
-                    //             document.querySelector('main ul li .categoriaItem h3').innerText.includes("men's clothing").classList.add('none')
-                    //         case 3:
-                    //             document.querySelector('main ul li').classList.remove('none')
-                    //             document.querySelector('main ul li .categoriaItem h3').innerText.includes("women's clothing").classList.add('none')
-                    //     }
-
-                })
+    fetch(`https://fakestoreapi.com/products/category/${categorias.value}`)
+        .then(response=>response.json())
+        .then(response=>{
+            console.log(response);
+            for (let i = 0; i < produtos.children.length; i++){
+                if (response[i].category.value != categorias.value){
+                    console.log(response[i].category)
+                    let elemento = document.querySelector('main ul li')
+                    elemento.classList.add('none')
+                }            
+            }
+        })
 }
 
 async function getProducts() {
