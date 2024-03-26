@@ -12,21 +12,6 @@ function getCategories() {
             })
 } getCategories();
 
-// function searchProductByCategory(){
-//     fetch(`https://fakestoreapi.com/products/category/${categorias.value}`)
-//         .then(response=>response.json())
-//         .then(response=>{
-//             console.log(response);
-//             for (let i = 0; i < produtos.children.length; i++){
-//                 if (response[i].category.value != categorias.value){
-//                     console.log(response[i].category)
-//                     let elemento = document.querySelector('main ul li')
-//                     elemento.classList.add('none')
-//                 }            
-//             }
-//         })
-// }
-
 function orderingBy(){
     renderList(lista.toSorted((a, b) => ordenacao.value ? a.price - b.price : a.rating.rate - b.rating.rate))
 }
